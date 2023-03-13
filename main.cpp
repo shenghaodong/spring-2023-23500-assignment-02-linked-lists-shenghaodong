@@ -1,6 +1,6 @@
 #include <iostream>
 #include "OList.h"
-#include "node.h"
+#include "lists.h"
 
 int main(){
     OList *l = new OList();

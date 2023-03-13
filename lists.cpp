@@ -1,6 +1,6 @@
 #include <iostream>
 #include "Node.h"
-#include "List.h"
+#include "lists.h"
 
 List::List(){
   head = nullptr;
