@@ -2,7 +2,8 @@ main: main.o Olist.o lists.o Node.o
 	g++ -o main main.o Olist.o lists.o node.o
 
 
-tests: tests.o Olists.o lists.o Node.o
+
+tests: tests.o Olist.o lists.o Node.o
 	g++ -o tests tests.o Olist.o lists.o node.o
 
 
@@ -12,7 +13,7 @@ lists.o: lists.cpp lists.h node.cpp node.h Node.h
 
 main.o: main.cpp Olist.h lists.h Node.h
 
-tests.o: tests.cpp doctest.h Olists.h lists.h Node.h
+tests.o: tests.cpp doctest.h Olist.h lists.h Node.h
 
 Node.o: Node.cpp Node.h
 

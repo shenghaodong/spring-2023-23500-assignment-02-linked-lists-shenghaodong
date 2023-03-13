@@ -90,6 +90,20 @@ std::string OList::toString(){
   return result;
 }
 
+std::string OList::get(int loc){
+  Node *walker = head;
+  int count = 0;
+  while (walker != nullptr && count < loc){
+    walker = walker->getNext();
+    count++;
+  }
+  if (walker == nullptr){
+    return "nullptr";
+  } else {
+    return walker->getData();
+  }
+}
+
 bool OList::contains(std::string value){
   Node *walker = head;
   while (walker != nullptr && walker->getData() != value){
