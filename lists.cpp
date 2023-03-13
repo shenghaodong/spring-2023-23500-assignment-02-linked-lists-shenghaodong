@@ -132,8 +132,6 @@ void List::remove(int loc){
     trailer->setNext(walker->getNext());
     delete walker;
   }
-  
-
 }
 
 

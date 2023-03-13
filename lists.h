@@ -12,7 +12,6 @@ class List{
   void insert(int loc, std::string data); //0 indexed
   int length();
   std::string find(std::string data);
-
   std::string toString(); // for testing purposes
   void remove(int loc);
 };
