@@ -136,29 +136,10 @@ void OList::reverse(){
   walker = this->head; //Current
   trailer = nullptr; //Prev
   while(walker != nullptr){
-    Node *next;
-    next = walker->getNext();
+    Node *next = walker->getNext();
     walker->setNext(trailer);
-    trailer->setData(walker->getData());
-    walker->setData(next->getData());
+    trailer = walker;
+    walker = next;
   }
-
+  head = trailer;
 }
-/*
-        // Initialize current, previous and next pointers
-        Node* current = head;
-        Node *prev = NULL, *next = NULL;
- 
-        while (current != NULL) {
-            // Store next
-            next = current->next;
-            // Reverse current node's pointer
-            current->next = prev;
-            // Move pointers one position ahead.
-            prev = current;
-            current = next;
-        }
-        head = prev;
-void remove(loc) - removes the value at loc
-void reverse() - This should “reverse” the list - that is reverse the pointers
-*/
